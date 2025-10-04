@@ -13,7 +13,6 @@ string TrckArtist[maxrow] = {};
 string TrckAlbum[maxrow] = {};
 string TrckRelease[maxrow] = {};
 
-// Open Text File
 void OpenFile(){
 
     string line;
@@ -36,7 +35,6 @@ void OpenFile(){
   }
 }
 
-// Add Song Function
 void AddSongs() {
     char name[20];
     char songid[5];
@@ -69,7 +67,6 @@ void AddSongs() {
     }
 }
 
-// List All Songs Function
 void ListSongs() {
     system("CLS");
 
@@ -105,8 +102,6 @@ void ListSongs() {
     cout << "====================================================================================================================================\n";
 }
 
- 
-// Search Song Function
 void SearchSongs(string search) {
     system("CLS"); 
     int counter = 0;
@@ -131,7 +126,6 @@ void SearchSongs(string search) {
     cout << "========================================================================================================" << endl;
 }
 
-// Update Song Details Function
 void UpdateSongs(string search){
 
     char name[20];
@@ -180,7 +174,6 @@ void UpdateSongs(string search){
 
 }
 
-// Delete Song Record Function
 void DeleteSongs(string search){
 
     int counter = 0;
@@ -205,7 +198,6 @@ void DeleteSongs(string search){
     }
 }
 
-// Delete All Songs Function
 void DeleteAllSongs() {
     for (int x = 0; x < maxrow; x++) {
         TrckID[x].clear();
@@ -216,7 +208,6 @@ void DeleteAllSongs() {
     }
     cout << "All songs have been successfully deleted!" << endl;
 }
-
 
 void SaveToFile(){
     ofstream myfile;
